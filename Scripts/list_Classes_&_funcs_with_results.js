@@ -5,7 +5,7 @@ Java.perform(function() {
     // Loop through all classes
     classes.forEach(function(className) {
         try {
-            // Use classes that might be of interest (e.g., classes starting with specific package names)
+            // Use classes that might be of interest
             if (className.startsWith('com.tiagorlampert.rootcheck') || className.startsWith('com.example')) {
                 var cls = Java.use(className);
                 
@@ -40,7 +40,7 @@ Java.perform(function() {
                                     console.error('    Error calling method ' + name + ': ' + e.message);
                                 }
                                 
-                                return result; // Ensure the original method continues to work
+                                return result; 
                             };
                         });
                     } catch (e) {
